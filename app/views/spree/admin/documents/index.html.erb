@@ -3,13 +3,13 @@
 <%= render :partial => 'spree/admin/shared/product_tabs', :locals => {:current => 'Documents'} %>
 
 <% content_for :page_actions do %>
-  <li><%= link_to_with_icon('plus', Spree.t(:new_document), new_admin_product_document_url(@product), :id => 'new_document_link', :class => 'button') %></li>
+  <%= link_to_with_icon('plus', Spree.t(:new_document), new_admin_product_document_url(@product), :id => 'new_document_link', :class => 'btn btn-success') %>
 <% end %>
 
 <div id="documents" data-hook></div>
 
 <% unless @product.documents.any? || @product.variant_documents.any? %>
-  <div class="no-objects-found">
+  <div class="alert alert-warning">
     <%= Spree.t(:no_documents_found) %>.
   </div>
 <% else %>
