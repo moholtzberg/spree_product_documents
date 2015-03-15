@@ -5,7 +5,7 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_product_tabs",
 	:text => "
 		<% @product.documents.each do |d| %>
 			<li>
-				<%= link_to "<i class='fa fa-file fa-fw'></i> #{d.attachment_file_name}".html_safe, d.attachment.url(:product) %>
+				<%= link_to \"<i class='fa fa-file fa-fw'></i> #{d.attachment_file_name}\".html_safe, d.attachment.url(:product) %>
 			</li>
 	<% end %>
 ")
